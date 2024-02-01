@@ -32,7 +32,7 @@ const Flashcard = ({ question, answer, imageName, choices }) => {
 
       {selectedAnswer && (
         <p className={`feedback ${selectedAnswer === answer ? 'correct' : 'incorrect'}`}>
-          {selectedAnswer === answer ? 'Correct!' : 'Incorrect!'}
+          {selectedAnswer === answer ? 'Correcto!' : 'Incorrecto!'}
         </p>
       )}
     </div>
