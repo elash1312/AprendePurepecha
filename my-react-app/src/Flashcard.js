@@ -1,9 +1,9 @@
 // Flashcard.js
+// Flashcard.js
 
 import React, { useState } from 'react';
 
 const Flashcard = ({ question, answer, imageName, choices }) => {
-  console.log({ question, answer, imageName, choices });
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const handleAnswerClick = (choice) => {
@@ -19,7 +19,7 @@ const Flashcard = ({ question, answer, imageName, choices }) => {
 
       <h3>Respuesta:</h3>
       <div className="choices">
-        {choices.map((choice, index) => (
+        {choices && choices.map((choice, index) => (
           <div
             key={index}
             className={`choice ${selectedAnswer === choice ? 'selected' : ''}`}
@@ -40,3 +40,4 @@ const Flashcard = ({ question, answer, imageName, choices }) => {
 };
 
 export default Flashcard;
+
