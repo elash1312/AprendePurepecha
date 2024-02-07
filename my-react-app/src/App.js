@@ -1,36 +1,23 @@
-import logo from './logo.svg';
-import React, { useState, useEffect } from 'react';
-import './App.css'; // or your stylesheet
-import Flashcard from './Flashcard'; // Import the Flashcard components
-import { flashcardsData } from './FlashcardsData';
-
-
 // App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LandingPage from './LandingPage';
 
-function App() {
-  const [randomFlashcard, setRandomFlashcard] = useState({});
-
-  useEffect(() => {
-    // Select a random flashcard when the component mounts
-    generateRandomFlashcard();
-  }, []);
-
-  const generateRandomFlashcard = () => {
-    const randomIndex = Math.floor(Math.random() * flashcardsData.length);
-    const selectedFlashcard = flashcardsData[randomIndex];
-    setRandomFlashcard(selectedFlashcard);
-  };
-
+const App = () => {
   return (
-    <div className="App">
-      <h1>Aprende Purépecha</h1>
-      <Flashcard {...randomFlashcard} />
-      <button onClick={generateRandomFlashcard}>Generate Random Flashcard</button>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        {/* Add more routes here */}
+      </Switch>
+    </Router>
   );
 }
 
 export default App;
+
+
+
 
 
 

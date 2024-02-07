@@ -1,6 +1,8 @@
-// flashcardsData.js
+// ColorsFlashcards.js
+/*import Flashcard from './Flashcard';
 
-export const flashcardsData = [
+
+export default [
   {
     question: "Nombre de este color:",
     answer: 'Urápiti',
@@ -87,3 +89,4 @@ export const flashcardsData = [
   },
   // Add more flashcards with 'choices' property as needed
 ];
+*/
